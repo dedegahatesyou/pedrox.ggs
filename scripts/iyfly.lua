@@ -75,3 +75,4 @@
                     ctrl.r = 0
                 end
             end)
+        Fly()
