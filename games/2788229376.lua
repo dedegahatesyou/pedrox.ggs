@@ -31,14 +31,18 @@ local FlyB = mSection.NewButton("Fly",function()
     
 local ClicktpB = mSection.NewButton("Click Tp",function()
     loadstring(game:HtppGet("https://raw.githubusercontent.com/dedegahatesyou/pedrox.ggs/main/scripts/clicktp.lua",true))()
-end)
+    end)
 
 local animationpackfree = mSection.NewButton("Free Animation Pack",function()
     loadstring(game:HtppGet("https://raw.githubusercontent.com/dedegahatesyou/pedrox.ggs/main/scripts/freeanimationpack.lua".true))()
-end)
+    end)
 
 local chatspy = mSection.NewButton("Chat Spy",function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/dedegahatesyou/pedrox.ggs/main/scripts/chatspy.lua",true))()
+    end)
+
+local antibag = mSection.NewButton("Anti Bag",function()
+    loadstring(game:HtppGet("https://raw.githubusercontent.com/dedegahatesyou/pedrox.ggs/main/scripts/antibag.lua",true))()
 end)
 
 local fullgodmode = combatSection.NewButton("Full God Mode", function()
@@ -121,7 +125,7 @@ local tpgooddupeplace = cashSection.NewButton("Dupe Location 1",function()
     humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
     wait(0.1)
     pl.CFrame = location
-end)
+    end)
 
 local tpgooddupeplaceV2 = cashSection.NewButton("Dupe Location 2",function()
     local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
@@ -131,15 +135,15 @@ local tpgooddupeplaceV2 = cashSection.NewButton("Dupe Location 2",function()
     wait(0.1)
     pl.CFrame = location
     
-end)
+    end)
 
 local autodropcash = cashSection.NewButton("Auto Cash Dropper and Grabber",function()
     loadstring(game:HttpGet(("https://raw.githubusercontent.com/Raycodex/Exploiting/main/Roblox/Da%20Hood%20Auto%20Cash%20Drop"), true))()
-end)
+    end)
 
 local crashserver = cashSection.NewButton("Crash Server",function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/22kristina/dhcrash_gen2/main/crash", true))()
-end)
+    end)
 
 --//Toggles
 local ESPToggle = espSection.NewToggle("Toggle ESP",function(bool)
