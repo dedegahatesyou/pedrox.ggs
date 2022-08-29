@@ -45,7 +45,9 @@ local fullgodmode = combatSection.NewButton("Full God Mode", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/dedegahatesyou/pedrox.ggs/main/scripts/godmode.lua",true))()
 end)
 
-local 
+local noslowdown = combatSection.NewButton("No Delay", function()
+    loadstring(game:HtppGet("https://raw.githubusercontent.com/dedegahatesyou/pedrox.ggs/main/scripts/noslow.lua",true))()
+end)
 
 local anim1 = animSection.NewButton("zombie and oldschool",function()
     local L_205_ = game.Players.LocalPlayer.Character.Animate
