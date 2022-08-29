@@ -1,4 +1,4 @@
 # pedrox.ggs
-Pedrox on top! 😝
+PedroX on top! 😝
 # Games:
 **Da Hood, more to come**
