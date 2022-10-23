@@ -1,6 +1,13 @@
 -- Gui to Lua
 -- Version: 3.2
 
+-- remove clones
+for _, v in next, game:GetService("CoreGui"):GetChildren() do
+	if (v.Name:match("FreeAnimationPack")) then
+		v:Destroy()
+	end
+end
+
 -- Instances:
 
 local ESPscript = loadstring(game:HttpGet("https://kiriot22.com/releases/ESP.lua"))()
@@ -1522,194 +1529,7 @@ local function AOYQNPR_fake_script() -- freebutton.LocalScript
 
 	script.Parent.MouseButton1Click:Connect(function()
 
-		-- // clone
-		for _, v in next, game:GetService("CoreGui"):GetChildren() do
-			if (v.Name:match("FreeAnimationPack")) then
-				v:Destroy()
-			end
-		end
-
-		-- // Instances
-		local FreeAnimationPack = Instance.new("ScreenGui")
-		local AnimationPack = Instance.new("TextButton")
-		local Animations = Instance.new("ScrollingFrame")
-		local UIListLayout = Instance.new("UIListLayout")
-		local Lean = Instance.new("TextButton")
-		local Lay = Instance.new("TextButton")
-		local Dance1 = Instance.new("TextButton")
-		local Dance2 = Instance.new("TextButton")
-		local Greet = Instance.new("TextButton")
-		local ChestPump = Instance.new("TextButton")
-		local Praying = Instance.new("TextButton")
-		local Stop = Instance.new("TextButton")
-		local UniversalAnimation = Instance.new("Animation")
-
-		-- // Utility
-		function stopTracks()
-			for _, v in next, game:GetService("Players").LocalPlayer.Character:FindFirstChildOfClass("Humanoid"):GetPlayingAnimationTracks() do
-				if (v.Animation.AnimationId:match("rbxassetid")) then
-					v:Stop()
-				end
-			end
-		end
-
-		function loadAnimation(id)
-			if UniversalAnimation.AnimationId == id then
-				stopTracks()
-				UniversalAnimation.AnimationId = "1"
-			else
-				UniversalAnimation.AnimationId = id
-				local animationTrack = game:GetService("Players").LocalPlayer.Character:FindFirstChildOfClass("Humanoid"):LoadAnimation(UniversalAnimation)
-				animationTrack:Play()
-			end
-		end
-
-
-		FreeAnimationPack.Name = "FreeAnimationPack"
-		FreeAnimationPack.Parent = game.CoreGui
-		FreeAnimationPack.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-
-		AnimationPack.Name = "AnimationPack"
-		AnimationPack.Parent = FreeAnimationPack
-		AnimationPack.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-		AnimationPack.BorderSizePixel = 0
-		AnimationPack.Position = UDim2.new(0, 0, 0.388007045, 0)
-		AnimationPack.Size = UDim2.new(0, 100, 0, 20)
-		AnimationPack.Font = Enum.Font.SourceSansBold
-		AnimationPack.Text = "Animations"
-		AnimationPack.TextColor3 = Color3.fromRGB(0, 0, 0)
-		AnimationPack.TextSize = 18.000
-		AnimationPack.MouseButton1Click:Connect(function()
-			if (Animations.Visible == false) then
-				Animations.Visible = true
-			end
-		end)
-
-		Animations.Name = "Animations"
-		Animations.Parent = AnimationPack
-		Animations.Active = true
-		Animations.BackgroundColor3 = Color3.fromRGB(102, 102, 102)
-		Animations.Position = UDim2.new(-0.104712225, 0, -1.54173493, 0)
-		Animations.Size = UDim2.new(0, 120, 0, 195)
-		Animations.Visible = false
-		Animations.CanvasPosition = Vector2.new(0, 60.0000305)
-		Animations.CanvasSize = UDim2.new(0, 0, 1, 235)
-
-		UIListLayout.Parent = Animations
-		UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
-		UIListLayout.Padding = UDim.new(0, 2)
-
-		Lean.Name = "Lean"
-		Lean.Parent = Animations
-		Lean.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-		Lean.Size = UDim2.new(1, 0, 0, 30)
-		Lean.Font = Enum.Font.SourceSansBold
-		Lean.Text = "Lean"
-		Lean.TextColor3 = Color3.fromRGB(0, 0, 0)
-		Lean.TextSize = 14.000
-		Lean.MouseButton1Click:Connect(function()
-			stopTracks()
-			loadAnimation("rbxassetid://3152375249")
-		end)
-
-		Lay.Name = "Lay"
-		Lay.Parent = Animations
-		Lay.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-		Lay.Size = UDim2.new(1, 0, 0, 30)
-		Lay.Font = Enum.Font.SourceSansBold
-		Lay.Text = "Lay"
-		Lay.TextColor3 = Color3.fromRGB(0, 0, 0)
-		Lay.TextSize = 14.000
-		Lay.MouseButton1Click:Connect(function()
-			stopTracks()
-			loadAnimation("rbxassetid://3152378852")
-		end)
-
-		Dance1.Name = "Dance1"
-		Dance1.Parent = Animations
-		Dance1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-		Dance1.Size = UDim2.new(1, 0, 0, 30)
-		Dance1.Font = Enum.Font.SourceSansBold
-		Dance1.Text = "Dance1"
-		Dance1.TextColor3 = Color3.fromRGB(0, 0, 0)
-		Dance1.TextSize = 14.000
-		Dance1.MouseButton1Click:Connect(function()
-			stopTracks()
-			loadAnimation("rbxassetid://3189773368")
-		end)
-
-		Dance2.Name = "Dance2"
-		Dance2.Parent = Animations
-		Dance2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-		Dance2.Size = UDim2.new(1, 0, 0, 30)
-		Dance2.Font = Enum.Font.SourceSansBold
-		Dance2.Text = "Dance2"
-		Dance2.TextColor3 = Color3.fromRGB(0, 0, 0)
-		Dance2.TextSize = 14.000
-		Dance2.MouseButton1Click:Connect(function()
-			stopTracks()
-			loadAnimation("rbxassetid://3189776546")
-		end)
-
-		Greet.Name = "Greet"
-		Greet.Parent = Animations
-		Greet.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-		Greet.Size = UDim2.new(1, 0, 0, 30)
-		Greet.Font = Enum.Font.SourceSansBold
-		Greet.Text = "Greet"
-		Greet.TextColor3 = Color3.fromRGB(0, 0, 0)
-		Greet.TextSize = 14.000
-		Greet.MouseButton1Click:Connect(function()
-			stopTracks()
-			loadAnimation("rbxassetid://3189777795")
-		end)
-
-		ChestPump.Name = "ChestPump"
-		ChestPump.Parent = Animations
-		ChestPump.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-		ChestPump.Size = UDim2.new(1, 0, 0, 30)
-		ChestPump.Font = Enum.Font.SourceSansBold
-		ChestPump.Text = "Chest Pump"
-		ChestPump.TextColor3 = Color3.fromRGB(0, 0, 0)
-		ChestPump.TextSize = 14.000
-		ChestPump.MouseButton1Click:Connect(function()
-			stopTracks()
-			loadAnimation("rbxassetid://3189779152")
-		end)
-
-		Praying.Name = "Praying"
-		Praying.Parent = Animations
-		Praying.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-		Praying.Size = UDim2.new(1, 0, 0, 30)
-		Praying.Font = Enum.Font.SourceSansBold
-		Praying.Text = "Praying"
-		Praying.TextColor3 = Color3.fromRGB(0, 0, 0)
-		Praying.TextSize = 14.000
-		Praying.MouseButton1Click:Connect(function()
-			stopTracks()
-			loadAnimation("rbxassetid://3487719500")
-		end)
-
-		Stop.Name = "Stop"
-		Stop.Parent = Animations
-		Stop.BackgroundColor3 = Color3.fromRGB(255, 112, 112)
-		Stop.Size = UDim2.new(1, 0, 0, 30)
-		Stop.Font = Enum.Font.SourceSansBold
-		Stop.Text = "Stop Animation"
-		Stop.TextColor3 = Color3.fromRGB(0, 0, 0)
-		Stop.TextSize = 14.000
-		Stop.MouseButton1Click:Connect(function()
-			stopTracks()
-		end)
-		--close gui
-		local plr = game.Players.LocalPlayer
-
-		plr:GetMouse().KeyDown:Connect(function(K)
-			if K == "p" then
-				Animations.Visible = false
-			end
-		end)
-
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/dedegahatesyou/pedrox.ggs/main/scripts/FreeAnimPack.lua", true))()
 
 	end)
 end
@@ -1719,7 +1539,115 @@ local function DINIZ_fake_script() -- flybutton.LocalScript
 
 	script.Parent.MouseButton1Click:Connect(function()
 
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/dedegahatesyou/pedrox.ggs/main/scripts/iyfly.lua",true))()
+		local plr = game.Players.LocalPlayer
+		local mouse = plr:GetMouse()
+
+		localplayer = plr
+
+		if workspace:FindFirstChild("Core") then
+			workspace.Core:Destroy()
+		end
+
+		local Core = Instance.new("Part")
+		Core.Name = "Core"
+		Core.Size = Vector3.new(0.05, 0.05, 0.05)
+
+		spawn(function()
+			Core.Parent = workspace
+			local Weld = Instance.new("Weld", Core)
+			Weld.Part0 = Core
+			Weld.Part1 = localplayer.Character.LowerTorso
+			Weld.C0 = CFrame.new(0, 0, 0)
+		end)
+
+		workspace:WaitForChild("Core")
+
+		local torso = workspace.Core
+		flying = true
+		local speed=10
+		local keys={a=false,d=false,w=false,s=false} 
+		local e1
+		local e2
+		local function start()
+			local pos = Instance.new("BodyPosition",torso)
+			local gyro = Instance.new("BodyGyro",torso)
+			pos.Name="EPIXPOS"
+			pos.maxForce = Vector3.new(math.huge, math.huge, math.huge)
+			pos.position = torso.Position
+			gyro.maxTorque = Vector3.new(9e9, 9e9, 9e9) 
+			gyro.cframe = torso.CFrame
+			repeat
+				wait()
+				localplayer.Character.Humanoid.PlatformStand=true
+				local new=gyro.cframe - gyro.cframe.p + pos.position
+				if not keys.w and not keys.s and not keys.a and not keys.d then
+					speed=5
+				end
+				if keys.w then 
+					new = new + workspace.CurrentCamera.CoordinateFrame.lookVector * speed
+					speed=speed+0
+				end
+				if keys.s then 
+					new = new - workspace.CurrentCamera.CoordinateFrame.lookVector * speed
+					speed=speed+0
+				end
+				if keys.d then 
+					new = new * CFrame.new(speed,0,0)
+					speed=speed+0
+				end
+				if keys.a then 
+					new = new * CFrame.new(-speed,0,0)
+					speed=speed+0
+				end
+				if speed>10 then
+					speed=5
+				end
+				pos.position=new.p
+				if keys.w then
+					gyro.cframe = workspace.CurrentCamera.CoordinateFrame*CFrame.Angles(-math.rad(speed*0),0,0)
+				elseif keys.s then
+					gyro.cframe = workspace.CurrentCamera.CoordinateFrame*CFrame.Angles(math.rad(speed*0),0,0)
+				else
+					gyro.cframe = workspace.CurrentCamera.CoordinateFrame
+				end
+			until flying == false
+			if gyro then gyro:Destroy() end
+			if pos then pos:Destroy() end
+			flying=false
+			localplayer.Character.Humanoid.PlatformStand=false
+			speed=10
+		end
+		e1=mouse.KeyDown:connect(function(key)
+			if not torso or not torso.Parent then flying=false e1:disconnect() e2:disconnect() return end
+			if key=="w" then
+				keys.w=true
+			elseif key=="s" then
+				keys.s=true
+			elseif key=="a" then
+				keys.a=true
+			elseif key=="d" then
+				keys.d=true
+			elseif key=="x" then
+				if flying==true then
+					flying=false
+				else
+					flying=true
+					start()
+				end
+			end
+		end)
+		e2=mouse.KeyUp:connect(function(key)
+			if key=="w" then
+				keys.w=false
+			elseif key=="s" then
+				keys.s=false
+			elseif key=="a" then
+				keys.a=false
+			elseif key=="d" then
+				keys.d=false
+			end
+		end)
+		start()
 
 	end)
 end
@@ -2512,22 +2440,20 @@ end
 coroutine.wrap(JUTRD_fake_script)()
 local function ZKUFGA_fake_script() -- infoDHC.LocalScript 
 	local script = Instance.new('LocalScript', infoDHC)
-
-	if game.PlaceId == 2788229376 then
-
-		script.Parent.Text = "game : Da Hood"
-
-	end
+	
+	local money = game.Players.LocalPlayer.DataFolder.Currency
+	
+	script.Parent.Text = "cash : "..money.Value
+	
 end
 coroutine.wrap(ZKUFGA_fake_script)()
 local function UHNBX_fake_script() -- infoBounty.LocalScript 
 	local script = Instance.new('LocalScript', infoBounty)
-
-	if game.PlaceId == 2788229376 then
-
-		script.Parent.Text = "game : Da Hood"
-
-	end
+	
+	local data = game.Players.LocalPlayer.DataFolder.Information.Wanted
+	
+	script.Parent.Text = "wanted : "..data.Value
+	
 end
 coroutine.wrap(UHNBX_fake_script)()
 local function WPNOW_fake_script() -- toptext.LocalScript 
