@@ -1528,6 +1528,18 @@ local function AOYQNPR_fake_script() -- freebutton.LocalScript
 	local script = Instance.new('LocalScript', freebutton)
 
 	script.Parent.MouseButton1Click:Connect(function()
+		
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/dedegahatesyou/pedrox.ggs/main/scripts/FreeAnimPack.lua",true))()	
+			
+	end)
+
+end
+coroutine.wrap(AOYQNPR_fake_script)()
+local function DINIZ_fake_script() -- flybutton.LocalScript 
+	
+	local script = Instance.new('LocalScritp', flybutton)
+	
+	script.Parent.MouseButton1Click:Connect(function()
 
 		local plr = game.Players.LocalPlayer
 		local mouse = plr:GetMouse()
@@ -1638,16 +1650,6 @@ local function AOYQNPR_fake_script() -- freebutton.LocalScript
 			end
 		end)
 		start()
-
-	end)
-end
-coroutine.wrap(AOYQNPR_fake_script)()
-local function DINIZ_fake_script() -- flybutton.LocalScript 
-	local script = Instance.new('LocalScript', flybutton)
-
-	script.Parent.MouseButton1Click:Connect(function()
-
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/dedegahatesyou/pedrox.ggs/main/scripts/iyfly.lua", true))()
 
 	end)
 end
