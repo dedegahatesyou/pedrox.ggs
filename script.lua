@@ -1,7 +1,7 @@
 --[[
 
  PEDROX GUI
- VERSION: V2.0
+ VERSION: V1.0
  SUPPORTED GAMES: Da Hood
 
 ]]--
