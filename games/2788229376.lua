@@ -3,6 +3,7 @@
 
 -- Instances:
 
+local ESPscript = loadstring(game:HttpGet("https://kiriot22.com/releases/ESP.lua"))()
 local pedroxggs = Instance.new("ScreenGui")
 local ui = Instance.new("Frame")
 local tabs = Instance.new("Folder")
@@ -28,6 +29,24 @@ local RightETab = Instance.new("Frame")
 local eR_content = Instance.new("Frame")
 local eR_name = Instance.new("Frame")
 local ertext = Instance.new("TextLabel")
+local Esplistframe = Instance.new("Frame")
+local Esplistlayout = Instance.new("UIListLayout")
+local toggleesp = Instance.new("Frame")
+local Espborder = Instance.new("Frame")
+local toggleEb = Instance.new("TextButton")
+local toggleEtext = Instance.new("TextLabel")
+local togglename = Instance.new("Frame")
+local Namesborder = Instance.new("Frame")
+local toggleNb = Instance.new("TextButton")
+local toggleNtext = Instance.new("TextLabel")
+local toggleboxes = Instance.new("Frame")
+local Boxesborder = Instance.new("Frame")
+local toggleBb = Instance.new("TextButton")
+local toggleBteext = Instance.new("TextLabel")
+local toggletracers = Instance.new("Frame")
+local Tracerborder = Instance.new("Frame")
+local toggleTb = Instance.new("TextButton")
+local toggleTtext = Instance.new("TextLabel")
 local teleports = Instance.new("Frame")
 local tp_contents = Instance.new("Frame")
 local tptab = Instance.new("Frame")
@@ -105,10 +124,24 @@ local RPGText = Instance.new("TextLabel")
 local Silencer = Instance.new("ImageButton")
 local UICorner_23 = Instance.new("UICorner")
 local SilText = Instance.new("TextLabel")
+local toggleAmmo = Instance.new("Frame")
+local ammoborder = Instance.new("Frame")
+local toggleAb = Instance.new("TextButton")
+local togglAText = Instance.new("TextLabel")
 local welcome = Instance.new("Frame")
 local w_contents = Instance.new("Frame")
 local userimg = Instance.new("ImageLabel")
-local w_text = Instance.new("TextLabel")
+local infotab = Instance.new("Frame")
+local IT_content = Instance.new("Frame")
+local eR_name_2 = Instance.new("Frame")
+local ertext_2 = Instance.new("TextLabel")
+local infolistframe = Instance.new("Frame")
+local infolistlayout = Instance.new("UIListLayout")
+local infotname = Instance.new("TextLabel")
+local infoUID = Instance.new("TextLabel")
+local infoGame = Instance.new("TextLabel")
+local infoDHC = Instance.new("TextLabel")
+local infoBounty = Instance.new("TextLabel")
 local top = Instance.new("Folder")
 local topbar = Instance.new("Frame")
 local topborder = Instance.new("Frame")
@@ -154,7 +187,7 @@ m_contents.Parent = main
 m_contents.BackgroundColor3 = Color3.fromRGB(36, 36, 36)
 m_contents.BorderColor3 = Color3.fromRGB(170, 0, 0)
 m_contents.Position = UDim2.new(0.00126113405, 0, 0, 0)
-m_contents.Size = UDim2.new(0, 469, 0, 505)
+m_contents.Size = UDim2.new(0, 470, 0, 505)
 
 RightMTab.Name = "Right-M-Tab"
 RightMTab.Parent = m_contents
@@ -311,7 +344,7 @@ esp_contents.Parent = esp
 esp_contents.BackgroundColor3 = Color3.fromRGB(36, 36, 36)
 esp_contents.BorderColor3 = Color3.fromRGB(170, 0, 0)
 esp_contents.Position = UDim2.new(0.00126113405, 0, 0, 0)
-esp_contents.Size = UDim2.new(0, 469, 0, 505)
+esp_contents.Size = UDim2.new(0, 470, 0, 505)
 
 RightETab.Name = "Right-E-Tab"
 RightETab.Parent = esp_contents
@@ -346,6 +379,174 @@ ertext.TextColor3 = Color3.fromRGB(170, 0, 0)
 ertext.TextSize = 14.000
 ertext.TextStrokeTransparency = 0.000
 
+Esplistframe.Name = "Esp-listframe"
+Esplistframe.Parent = eR_content
+Esplistframe.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Esplistframe.BackgroundTransparency = 1.000
+Esplistframe.Position = UDim2.new(0.0430622026, 0, 0.0652920976, 0)
+Esplistframe.Size = UDim2.new(0, 181, 0, 257)
+
+Esplistlayout.Name = "Esp-listlayout"
+Esplistlayout.Parent = Esplistframe
+Esplistlayout.SortOrder = Enum.SortOrder.LayoutOrder
+Esplistlayout.Padding = UDim.new(0, 15)
+
+toggleesp.Name = "toggleesp"
+toggleesp.Parent = Esplistframe
+toggleesp.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+toggleesp.BorderColor3 = Color3.fromRGB(0, 0, 0)
+toggleesp.Position = UDim2.new(0.0430622064, 0, 0.0481099635, 0)
+toggleesp.Size = UDim2.new(0, 10, 0, 10)
+
+Espborder.Name = "Esp-border"
+Espborder.Parent = toggleesp
+Espborder.BackgroundColor3 = Color3.fromRGB(36, 36, 36)
+Espborder.BorderColor3 = Color3.fromRGB(170, 0, 0)
+Espborder.Position = UDim2.new(0.0430633537, 0, 0.0481094345, 0)
+Espborder.Size = UDim2.new(0, 9, 0, 9)
+
+toggleEb.Name = "toggleEb"
+toggleEb.Parent = Espborder
+toggleEb.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+toggleEb.BackgroundTransparency = 1.000
+toggleEb.Size = UDim2.new(0, 9, 0, 9)
+toggleEb.Font = Enum.Font.SourceSans
+toggleEb.Text = "X"
+toggleEb.TextColor3 = Color3.fromRGB(255, 255, 255)
+toggleEb.TextSize = 13.000
+toggleEb.TextStrokeTransparency = 0.000
+toggleEb.TextTransparency = 1.000
+toggleEb.TextWrapped = true
+
+toggleEtext.Name = "toggleEtext"
+toggleEtext.Parent = toggleesp
+toggleEtext.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+toggleEtext.BackgroundTransparency = 1.000
+toggleEtext.Position = UDim2.new(1.79999995, 0, 0, 0)
+toggleEtext.Size = UDim2.new(0, 58, 0, 10)
+toggleEtext.Font = Enum.Font.Code
+toggleEtext.Text = "enabled"
+toggleEtext.TextColor3 = Color3.fromRGB(170, 0, 0)
+toggleEtext.TextSize = 15.000
+toggleEtext.TextStrokeTransparency = 0.000
+
+togglename.Name = "togglename"
+togglename.Parent = Esplistframe
+togglename.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+togglename.BorderColor3 = Color3.fromRGB(0, 0, 0)
+togglename.Position = UDim2.new(0.0430622064, 0, 0.127147764, 0)
+togglename.Size = UDim2.new(0, 10, 0, 10)
+
+Namesborder.Name = "Names-border"
+Namesborder.Parent = togglename
+Namesborder.BackgroundColor3 = Color3.fromRGB(36, 36, 36)
+Namesborder.BorderColor3 = Color3.fromRGB(170, 0, 0)
+Namesborder.Position = UDim2.new(0.0430633537, 0, 0.0481094345, 0)
+Namesborder.Size = UDim2.new(0, 9, 0, 9)
+
+toggleNb.Name = "toggleNb"
+toggleNb.Parent = Namesborder
+toggleNb.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+toggleNb.BackgroundTransparency = 1.000
+toggleNb.Size = UDim2.new(0, 9, 0, 9)
+toggleNb.Font = Enum.Font.SourceSans
+toggleNb.Text = "X"
+toggleNb.TextColor3 = Color3.fromRGB(255, 255, 255)
+toggleNb.TextSize = 13.000
+toggleNb.TextStrokeTransparency = 0.000
+toggleNb.TextTransparency = 1.000
+toggleNb.TextWrapped = true
+
+toggleNtext.Name = "toggleNtext"
+toggleNtext.Parent = togglename
+toggleNtext.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+toggleNtext.BackgroundTransparency = 1.000
+toggleNtext.Position = UDim2.new(1, 0, 0, 0)
+toggleNtext.Size = UDim2.new(0, 58, 0, 10)
+toggleNtext.Font = Enum.Font.Code
+toggleNtext.Text = "names"
+toggleNtext.TextColor3 = Color3.fromRGB(170, 0, 0)
+toggleNtext.TextSize = 15.000
+toggleNtext.TextStrokeTransparency = 0.000
+
+toggleboxes.Name = "toggleboxes"
+toggleboxes.Parent = Esplistframe
+toggleboxes.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+toggleboxes.BorderColor3 = Color3.fromRGB(0, 0, 0)
+toggleboxes.Position = UDim2.new(0.0430622026, 0, 0.202749148, 0)
+toggleboxes.Size = UDim2.new(0, 10, 0, 10)
+
+Boxesborder.Name = "Boxes-border"
+Boxesborder.Parent = toggleboxes
+Boxesborder.BackgroundColor3 = Color3.fromRGB(36, 36, 36)
+Boxesborder.BorderColor3 = Color3.fromRGB(170, 0, 0)
+Boxesborder.Position = UDim2.new(0.0430633537, 0, 0.0481094345, 0)
+Boxesborder.Size = UDim2.new(0, 9, 0, 9)
+
+toggleBb.Name = "toggleBb"
+toggleBb.Parent = Boxesborder
+toggleBb.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+toggleBb.BackgroundTransparency = 1.000
+toggleBb.Size = UDim2.new(0, 9, 0, 9)
+toggleBb.Font = Enum.Font.SourceSans
+toggleBb.Text = "X"
+toggleBb.TextColor3 = Color3.fromRGB(255, 255, 255)
+toggleBb.TextSize = 13.000
+toggleBb.TextStrokeTransparency = 0.000
+toggleBb.TextTransparency = 1.000
+toggleBb.TextWrapped = true
+
+toggleBteext.Name = "toggleBteext"
+toggleBteext.Parent = toggleboxes
+toggleBteext.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+toggleBteext.BackgroundTransparency = 1.000
+toggleBteext.Position = UDim2.new(1, 0, 0, 0)
+toggleBteext.Size = UDim2.new(0, 58, 0, 10)
+toggleBteext.Font = Enum.Font.Code
+toggleBteext.Text = "boxes"
+toggleBteext.TextColor3 = Color3.fromRGB(170, 0, 0)
+toggleBteext.TextSize = 15.000
+toggleBteext.TextStrokeTransparency = 0.000
+
+toggletracers.Name = "toggletracers"
+toggletracers.Parent = Esplistframe
+toggletracers.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+toggletracers.BorderColor3 = Color3.fromRGB(0, 0, 0)
+toggletracers.Position = UDim2.new(0.0430622064, 0, 0.278350472, 0)
+toggletracers.Size = UDim2.new(0, 10, 0, 10)
+
+Tracerborder.Name = "Tracer-border"
+Tracerborder.Parent = toggletracers
+Tracerborder.BackgroundColor3 = Color3.fromRGB(36, 36, 36)
+Tracerborder.BorderColor3 = Color3.fromRGB(170, 0, 0)
+Tracerborder.Position = UDim2.new(0.0430633537, 0, 0.0481094345, 0)
+Tracerborder.Size = UDim2.new(0, 9, 0, 9)
+
+toggleTb.Name = "toggleTb"
+toggleTb.Parent = Tracerborder
+toggleTb.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+toggleTb.BackgroundTransparency = 1.000
+toggleTb.Size = UDim2.new(0, 9, 0, 9)
+toggleTb.Font = Enum.Font.SourceSans
+toggleTb.Text = "X"
+toggleTb.TextColor3 = Color3.fromRGB(255, 255, 255)
+toggleTb.TextSize = 13.000
+toggleTb.TextStrokeTransparency = 0.000
+toggleTb.TextTransparency = 1.000
+toggleTb.TextWrapped = true
+
+toggleTtext.Name = "toggleTtext"
+toggleTtext.Parent = toggletracers
+toggleTtext.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+toggleTtext.BackgroundTransparency = 1.000
+toggleTtext.Position = UDim2.new(1.80000007, 0, 0, 0)
+toggleTtext.Size = UDim2.new(0, 58, 0, 10)
+toggleTtext.Font = Enum.Font.Code
+toggleTtext.Text = "tracers"
+toggleTtext.TextColor3 = Color3.fromRGB(170, 0, 0)
+toggleTtext.TextSize = 15.000
+toggleTtext.TextStrokeTransparency = 0.000
+
 teleports.Name = "teleports"
 teleports.Parent = tabs
 teleports.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -359,7 +560,7 @@ tp_contents.Parent = teleports
 tp_contents.BackgroundColor3 = Color3.fromRGB(36, 36, 36)
 tp_contents.BorderColor3 = Color3.fromRGB(170, 0, 0)
 tp_contents.Position = UDim2.new(0.00126113405, 0, 0, 0)
-tp_contents.Size = UDim2.new(0, 469, 0, 505)
+tp_contents.Size = UDim2.new(0, 470, 0, 505)
 
 tptab.Name = "tptab"
 tptab.Parent = tp_contents
@@ -1010,6 +1211,46 @@ SilText.TextStrokeTransparency = 0.000
 SilText.TextTransparency = 1.000
 SilText.TextWrapped = true
 
+toggleAmmo.Name = "toggleAmmo"
+toggleAmmo.Parent = tp_content
+toggleAmmo.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+toggleAmmo.BorderColor3 = Color3.fromRGB(0, 0, 0)
+toggleAmmo.Position = UDim2.new(0.0452794954, 0, 0.720448196, 0)
+toggleAmmo.Size = UDim2.new(0, 10, 0, 10)
+
+ammoborder.Name = "ammo-border"
+ammoborder.Parent = toggleAmmo
+ammoborder.BackgroundColor3 = Color3.fromRGB(36, 36, 36)
+ammoborder.BorderColor3 = Color3.fromRGB(170, 0, 0)
+ammoborder.Position = UDim2.new(0.143, 0, 0, 0)
+ammoborder.Size = UDim2.new(0, 8, 0, 9)
+
+toggleAb.Name = "toggleAb"
+toggleAb.Parent = ammoborder
+toggleAb.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+toggleAb.BackgroundTransparency = 1.000
+toggleAb.Position = UDim2.new(-0.178829193, 0, -0.185134888, 0)
+toggleAb.Size = UDim2.new(0, 10, 0, 10)
+toggleAb.Font = Enum.Font.SourceSans
+toggleAb.Text = "X"
+toggleAb.TextColor3 = Color3.fromRGB(255, 255, 255)
+toggleAb.TextSize = 13.000
+toggleAb.TextStrokeTransparency = 0.000
+toggleAb.TextTransparency = 1.000
+toggleAb.TextWrapped = true
+
+togglAText.Name = "togglAText"
+togglAText.Parent = toggleAmmo
+togglAText.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+togglAText.BackgroundTransparency = 1.000
+togglAText.Position = UDim2.new(5.30000019, 0, 0, 0)
+togglAText.Size = UDim2.new(0, 58, 0, 10)
+togglAText.Font = Enum.Font.Code
+togglAText.Text = "toggle ammo mode"
+togglAText.TextColor3 = Color3.fromRGB(170, 0, 0)
+togglAText.TextSize = 15.000
+togglAText.TextStrokeTransparency = 0.000
+
 welcome.Name = "welcome"
 welcome.Parent = tabs
 welcome.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -1022,27 +1263,125 @@ w_contents.Parent = welcome
 w_contents.BackgroundColor3 = Color3.fromRGB(36, 36, 36)
 w_contents.BorderColor3 = Color3.fromRGB(170, 0, 0)
 w_contents.Position = UDim2.new(0.00126113405, 0, 0, 0)
-w_contents.Size = UDim2.new(0, 469, 0, 505)
+w_contents.Size = UDim2.new(0, 470, 0, 505)
 
 userimg.Name = "userimg"
 userimg.Parent = w_contents
 userimg.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 userimg.BackgroundTransparency = 1.000
-userimg.Position = UDim2.new(0.39232409, 0, 0.134653464, 0)
+userimg.Position = UDim2.new(0.0597014874, 0, 0.201980203, 0)
 userimg.Size = UDim2.new(0, 100, 0, 100)
 userimg.Image = "rbxassetid://11278330618"
 
-w_text.Name = "w_text"
-w_text.Parent = w_contents
-w_text.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-w_text.BackgroundTransparency = 1.000
-w_text.Position = UDim2.new(0.232409388, 0, 0.332673281, 0)
-w_text.Size = UDim2.new(0, 251, 0, 29)
-w_text.Font = Enum.Font.Code
-w_text.Text = "welcome, nigger"
-w_text.TextColor3 = Color3.fromRGB(170, 0, 0)
-w_text.TextSize = 14.000
-w_text.TextStrokeTransparency = 0.000
+infotab.Name = "info-tab"
+infotab.Parent = welcome
+infotab.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+infotab.BorderColor3 = Color3.fromRGB(0, 0, 0)
+infotab.Position = UDim2.new(0.3372567, 0, 0.133063763, 0)
+infotab.Size = UDim2.new(0, 287, 0, 171)
+
+IT_content.Name = "IT_content"
+IT_content.Parent = infotab
+IT_content.BackgroundColor3 = Color3.fromRGB(36, 36, 36)
+IT_content.BorderColor3 = Color3.fromRGB(170, 0, 0)
+IT_content.Position = UDim2.new(0.00472118612, 0, 0.00343295978, 0)
+IT_content.Size = UDim2.new(0, 285, 0, 170)
+
+eR_name_2.Name = "eR_name"
+eR_name_2.Parent = IT_content
+eR_name_2.BackgroundColor3 = Color3.fromRGB(36, 36, 36)
+eR_name_2.BorderSizePixel = 0
+eR_name_2.Position = UDim2.new(0.0680389926, 0, -0.0624250621, 0)
+eR_name_2.Size = UDim2.new(0, 46, 0, 21)
+
+ertext_2.Name = "ertext"
+ertext_2.Parent = eR_name_2
+ertext_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ertext_2.BackgroundTransparency = 1.000
+ertext_2.Position = UDim2.new(-0.0209428072, 0, 0, 0)
+ertext_2.Size = UDim2.new(0, 47, 0, 21)
+ertext_2.Font = Enum.Font.Code
+ertext_2.Text = "info 📝"
+ertext_2.TextColor3 = Color3.fromRGB(170, 0, 0)
+ertext_2.TextSize = 14.000
+ertext_2.TextStrokeTransparency = 0.000
+
+infolistframe.Name = "info-listframe"
+infolistframe.Parent = IT_content
+infolistframe.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+infolistframe.BackgroundTransparency = 1.000
+infolistframe.Position = UDim2.new(0.0430622026, 0, 0.0652920976, 0)
+infolistframe.Size = UDim2.new(0, 181, 0, 257)
+
+infolistlayout.Name = "info-listlayout"
+infolistlayout.Parent = infolistframe
+infolistlayout.SortOrder = Enum.SortOrder.LayoutOrder
+infolistlayout.Padding = UDim.new(0, 15)
+
+infotname.Name = "infotname"
+infotname.Parent = infolistframe
+infotname.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+infotname.BackgroundTransparency = 1.000
+infotname.Position = UDim2.new(-0.0331491716, 0, 0, 0)
+infotname.Size = UDim2.new(0, 113, 0, 16)
+infotname.Font = Enum.Font.Code
+infotname.Text = "username : idk"
+infotname.TextColor3 = Color3.fromRGB(170, 0, 0)
+infotname.TextSize = 16.000
+infotname.TextStrokeTransparency = 0.000
+infotname.TextXAlignment = Enum.TextXAlignment.Left
+
+infoUID.Name = "infoUID"
+infoUID.Parent = infolistframe
+infoUID.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+infoUID.BackgroundTransparency = 1.000
+infoUID.Position = UDim2.new(-0.0331491716, 0, 0.0817120597, 0)
+infoUID.Size = UDim2.new(0, 97, 0, 16)
+infoUID.Font = Enum.Font.Code
+infoUID.Text = "userid : idk"
+infoUID.TextColor3 = Color3.fromRGB(170, 0, 0)
+infoUID.TextSize = 16.000
+infoUID.TextStrokeTransparency = 0.000
+infoUID.TextXAlignment = Enum.TextXAlignment.Left
+
+infoGame.Name = "infoGame"
+infoGame.Parent = infolistframe
+infoGame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+infoGame.BackgroundTransparency = 1.000
+infoGame.Position = UDim2.new(-0.0331491716, 0, 0.163424119, 0)
+infoGame.Size = UDim2.new(0, 82, 0, 16)
+infoGame.Font = Enum.Font.Code
+infoGame.Text = "game : idk"
+infoGame.TextColor3 = Color3.fromRGB(170, 0, 0)
+infoGame.TextSize = 16.000
+infoGame.TextStrokeTransparency = 0.000
+infoGame.TextXAlignment = Enum.TextXAlignment.Left
+
+infoDHC.Name = "infoDHC"
+infoDHC.Parent = infolistframe
+infoDHC.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+infoDHC.BackgroundTransparency = 1.000
+infoDHC.Position = UDim2.new(-0.0331491716, 0, 0.245136186, 0)
+infoDHC.Size = UDim2.new(0, 113, 0, 16)
+infoDHC.Font = Enum.Font.Code
+infoDHC.Text = "cash : idk"
+infoDHC.TextColor3 = Color3.fromRGB(170, 0, 0)
+infoDHC.TextSize = 16.000
+infoDHC.TextStrokeTransparency = 0.000
+infoDHC.TextXAlignment = Enum.TextXAlignment.Left
+
+infoBounty.Name = "infoBounty"
+infoBounty.Parent = infolistframe
+infoBounty.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+infoBounty.BackgroundTransparency = 1.000
+infoBounty.Position = UDim2.new(-0.0331491716, 0, 0.326848239, 0)
+infoBounty.Size = UDim2.new(0, 113, 0, 16)
+infoBounty.Font = Enum.Font.Code
+infoBounty.Text = "wanted : idk"
+infoBounty.TextColor3 = Color3.fromRGB(170, 0, 0)
+infoBounty.TextSize = 16.000
+infoBounty.TextStrokeTransparency = 0.000
+infoBounty.TextXAlignment = Enum.TextXAlignment.Left
 
 top.Name = "top"
 top.Parent = ui
@@ -1052,22 +1391,21 @@ topbar.Parent = top
 topbar.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 topbar.BorderColor3 = Color3.fromRGB(0, 0, 0)
 topbar.Position = UDim2.new(0.014403292, 0, 0.011029412, 0)
-topbar.Size = UDim2.new(0, 471, 0, 22)
-topbar.ZIndex = 2
+topbar.Size = UDim2.new(0, 471, 0, 21)
 
 topborder.Name = "top-border"
 topborder.Parent = topbar
-topborder.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+topborder.BackgroundColor3 = Color3.fromRGB(170, 0, 0)
 topborder.BorderColor3 = Color3.fromRGB(170, 0, 0)
-topborder.Position = UDim2.new(0.00126113405, 0, 0.0110293301, 0)
-topborder.Size = UDim2.new(0, 469, 0, 21)
+topborder.Position = UDim2.new(0.00126113405, 0, 0, 1)
+topborder.Size = UDim2.new(0, 470, 0, 20)
 topborder.ZIndex = 2
 
 topgradientF.Name = "top-gradientF"
 topgradientF.Parent = topborder
 topgradientF.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 topgradientF.BorderSizePixel = 0
-topgradientF.Size = UDim2.new(0, 469, 0, 21)
+topgradientF.Size = UDim2.new(0, 470, 0, 21)
 
 toptext.Name = "top-text"
 toptext.Parent = topgradientF
@@ -1160,11 +1498,11 @@ settings_button.ImageColor3 = Color3.fromRGB(170, 0, 0)
 
 -- Scripts:
 
-local function ESEVIQ_fake_script() -- ctpbutton.LocalScript 
+local function ZQBM_fake_script() -- ctpbutton.LocalScript 
 	local script = Instance.new('LocalScript', ctpbutton)
 
 	script.Parent.MouseButton1Click:Connect(function()
-		
+
 		mouse = game.Players.LocalPlayer:GetMouse()
 		tool = Instance.new("Tool")
 		tool.RequiresHandle = false
@@ -1175,22 +1513,22 @@ local function ESEVIQ_fake_script() -- ctpbutton.LocalScript
 			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = pos
 		end)
 		tool.Parent = game.Players.LocalPlayer.Backpack
-		
+
 	end)
 end
-coroutine.wrap(ESEVIQ_fake_script)()
-local function RBJYW_fake_script() -- freebutton.LocalScript 
+coroutine.wrap(ZQBM_fake_script)()
+local function AOYQNPR_fake_script() -- freebutton.LocalScript 
 	local script = Instance.new('LocalScript', freebutton)
 
 	script.Parent.MouseButton1Click:Connect(function()
-		
+
 		-- // clone
 		for _, v in next, game:GetService("CoreGui"):GetChildren() do
 			if (v.Name:match("FreeAnimationPack")) then
 				v:Destroy()
 			end
 		end
-	
+
 		-- // Instances
 		local FreeAnimationPack = Instance.new("ScreenGui")
 		local AnimationPack = Instance.new("TextButton")
@@ -1205,7 +1543,7 @@ local function RBJYW_fake_script() -- freebutton.LocalScript
 		local Praying = Instance.new("TextButton")
 		local Stop = Instance.new("TextButton")
 		local UniversalAnimation = Instance.new("Animation")
-	
+
 		-- // Utility
 		function stopTracks()
 			for _, v in next, game:GetService("Players").LocalPlayer.Character:FindFirstChildOfClass("Humanoid"):GetPlayingAnimationTracks() do
@@ -1214,7 +1552,7 @@ local function RBJYW_fake_script() -- freebutton.LocalScript
 				end
 			end
 		end
-	
+
 		function loadAnimation(id)
 			if UniversalAnimation.AnimationId == id then
 				stopTracks()
@@ -1225,12 +1563,12 @@ local function RBJYW_fake_script() -- freebutton.LocalScript
 				animationTrack:Play()
 			end
 		end
-	
-	
+
+
 		FreeAnimationPack.Name = "FreeAnimationPack"
 		FreeAnimationPack.Parent = game.CoreGui
 		FreeAnimationPack.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-	
+
 		AnimationPack.Name = "AnimationPack"
 		AnimationPack.Parent = FreeAnimationPack
 		AnimationPack.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -1246,7 +1584,7 @@ local function RBJYW_fake_script() -- freebutton.LocalScript
 				Animations.Visible = true
 			end
 		end)
-	
+
 		Animations.Name = "Animations"
 		Animations.Parent = AnimationPack
 		Animations.Active = true
@@ -1256,11 +1594,11 @@ local function RBJYW_fake_script() -- freebutton.LocalScript
 		Animations.Visible = false
 		Animations.CanvasPosition = Vector2.new(0, 60.0000305)
 		Animations.CanvasSize = UDim2.new(0, 0, 1, 235)
-	
+
 		UIListLayout.Parent = Animations
 		UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
 		UIListLayout.Padding = UDim.new(0, 2)
-	
+
 		Lean.Name = "Lean"
 		Lean.Parent = Animations
 		Lean.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -1273,7 +1611,7 @@ local function RBJYW_fake_script() -- freebutton.LocalScript
 			stopTracks()
 			loadAnimation("rbxassetid://3152375249")
 		end)
-	
+
 		Lay.Name = "Lay"
 		Lay.Parent = Animations
 		Lay.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -1286,7 +1624,7 @@ local function RBJYW_fake_script() -- freebutton.LocalScript
 			stopTracks()
 			loadAnimation("rbxassetid://3152378852")
 		end)
-	
+
 		Dance1.Name = "Dance1"
 		Dance1.Parent = Animations
 		Dance1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -1299,7 +1637,7 @@ local function RBJYW_fake_script() -- freebutton.LocalScript
 			stopTracks()
 			loadAnimation("rbxassetid://3189773368")
 		end)
-	
+
 		Dance2.Name = "Dance2"
 		Dance2.Parent = Animations
 		Dance2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -1312,7 +1650,7 @@ local function RBJYW_fake_script() -- freebutton.LocalScript
 			stopTracks()
 			loadAnimation("rbxassetid://3189776546")
 		end)
-	
+
 		Greet.Name = "Greet"
 		Greet.Parent = Animations
 		Greet.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -1325,7 +1663,7 @@ local function RBJYW_fake_script() -- freebutton.LocalScript
 			stopTracks()
 			loadAnimation("rbxassetid://3189777795")
 		end)
-	
+
 		ChestPump.Name = "ChestPump"
 		ChestPump.Parent = Animations
 		ChestPump.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -1338,7 +1676,7 @@ local function RBJYW_fake_script() -- freebutton.LocalScript
 			stopTracks()
 			loadAnimation("rbxassetid://3189779152")
 		end)
-	
+
 		Praying.Name = "Praying"
 		Praying.Parent = Animations
 		Praying.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -1351,7 +1689,7 @@ local function RBJYW_fake_script() -- freebutton.LocalScript
 			stopTracks()
 			loadAnimation("rbxassetid://3487719500")
 		end)
-	
+
 		Stop.Name = "Stop"
 		Stop.Parent = Animations
 		Stop.BackgroundColor3 = Color3.fromRGB(255, 112, 112)
@@ -1365,772 +1703,844 @@ local function RBJYW_fake_script() -- freebutton.LocalScript
 		end)
 		--close gui
 		local plr = game.Players.LocalPlayer
-	
+
 		plr:GetMouse().KeyDown:Connect(function(K)
 			if K == "p" then
 				Animations.Visible = false
 			end
 		end)
-	
-	
+
+
 	end)
 end
-coroutine.wrap(RBJYW_fake_script)()
-local function YLKGLVS_fake_script() -- flybutton.LocalScript 
+coroutine.wrap(AOYQNPR_fake_script)()
+local function DINIZ_fake_script() -- flybutton.LocalScript 
 	local script = Instance.new('LocalScript', flybutton)
 
 	script.Parent.MouseButton1Click:Connect(function()
-		
-		local plr = game.Players.LocalPlayer
-		local mouse = plr:GetMouse()
-	
-		localplayer = plr
-	
-		if workspace:FindFirstChild("Core") then
-			workspace.Core:Destroy()
-		end
-	
-		local Core = Instance.new("Part")
-		Core.Name = "Core"
-		Core.Size = Vector3.new(0.05, 0.05, 0.05)
-	
-		spawn(function()
-			Core.Parent = workspace
-			local Weld = Instance.new("Weld", Core)
-			Weld.Part0 = Core
-			Weld.Part1 = localplayer.Character.LowerTorso
-			Weld.C0 = CFrame.new(0, 0, 0)
-		end)
-	
-		workspace:WaitForChild("Core")
-	
-		local torso = workspace.Core
-		flying = true
-		local speed=10
-		local keys={a=false,d=false,w=false,s=false} 
-		local e1
-		local e2
-		local function start()
-			local pos = Instance.new("BodyPosition",torso)
-			local gyro = Instance.new("BodyGyro",torso)
-			pos.Name="EPIXPOS"
-			pos.maxForce = Vector3.new(math.huge, math.huge, math.huge)
-			pos.position = torso.Position
-			gyro.maxTorque = Vector3.new(9e9, 9e9, 9e9) 
-			gyro.cframe = torso.CFrame
-			repeat
-				wait()
-				localplayer.Character.Humanoid.PlatformStand=true
-				local new=gyro.cframe - gyro.cframe.p + pos.position
-				if not keys.w and not keys.s and not keys.a and not keys.d then
-					speed=5
-				end
-				if keys.w then 
-					new = new + workspace.CurrentCamera.CoordinateFrame.lookVector * speed
-					speed=speed+0
-				end
-				if keys.s then 
-					new = new - workspace.CurrentCamera.CoordinateFrame.lookVector * speed
-					speed=speed+0
-				end
-				if keys.d then 
-					new = new * CFrame.new(speed,0,0)
-					speed=speed+0
-				end
-				if keys.a then 
-					new = new * CFrame.new(-speed,0,0)
-					speed=speed+0
-				end
-				if speed>10 then
-					speed=5
-				end
-				pos.position=new.p
-				if keys.w then
-					gyro.cframe = workspace.CurrentCamera.CoordinateFrame*CFrame.Angles(-math.rad(speed*0),0,0)
-				elseif keys.s then
-					gyro.cframe = workspace.CurrentCamera.CoordinateFrame*CFrame.Angles(math.rad(speed*0),0,0)
-				else
-					gyro.cframe = workspace.CurrentCamera.CoordinateFrame
-				end
-			until flying == false
-			if gyro then gyro:Destroy() end
-			if pos then pos:Destroy() end
-			flying=false
-			localplayer.Character.Humanoid.PlatformStand=false
-			speed=10
-		end
-		e1=mouse.KeyDown:connect(function(key)
-			if not torso or not torso.Parent then flying=false e1:disconnect() e2:disconnect() return end
-			if key=="w" then
-				keys.w=true
-			elseif key=="s" then
-				keys.s=true
-			elseif key=="a" then
-				keys.a=true
-			elseif key=="d" then
-				keys.d=true
-			elseif key=="x" then
-				if flying==true then
-					flying=false
-				else
-					flying=true
-					start()
-				end
-			end
-		end)
-		e2=mouse.KeyUp:connect(function(key)
-			if key=="w" then
-				keys.w=false
-			elseif key=="s" then
-				keys.s=false
-			elseif key=="a" then
-				keys.a=false
-			elseif key=="d" then
-				keys.d=false
-			end
-		end)
-		start()
-		
+
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/dedegahatesyou/pedrox.ggs/main/scripts/iyfly.lua",true))()
+
 	end)
 end
-coroutine.wrap(YLKGLVS_fake_script)()
-local function MGGIRLC_fake_script() -- BankText.LocalScript 
+coroutine.wrap(DINIZ_fake_script)()
+local function ZOQW_fake_script() -- toggleEb.LocalScript 
+	local script = Instance.new('LocalScript', toggleEb)
+
+	local value = Instance.new("BoolValue")
+	value.Parent = script
+
+	script.Parent.MouseButton1Click:Connect(function()
+
+		if script.Parent.TextTransparency == 1 then
+
+			script.Parent.TextTransparency = 0
+
+		else
+
+			script.Parent.TextTransparency = 1
+
+		end
+
+		if value.Value == true then
+
+			value.Value = false
+
+		else 
+
+			value.Value = true
+
+		end
+
+		ESPscript:Toggle(value.Value)
+
+	end)
+end
+coroutine.wrap(ZOQW_fake_script)()
+local function EZBIH_fake_script() -- toggleNb.LocalScript 
+	local script = Instance.new('LocalScript', toggleNb)
+
+	local value = Instance.new("BoolValue")
+	value.Parent = script
+
+	script.Parent.MouseButton1Click:Connect(function()
+
+		if script.Parent.TextTransparency == 1 then
+
+			script.Parent.TextTransparency = 0
+
+		else
+
+			script.Parent.TextTransparency = 1
+
+		end
+
+		if value.Value == true then
+
+			value.Value = false
+
+		else 
+
+			value.Value = true
+
+		end
+
+		ESPscript.Names = value.Value
+
+	end)
+end
+coroutine.wrap(EZBIH_fake_script)()
+local function ESKUJ_fake_script() -- toggleBb.LocalScript 
+	local script = Instance.new('LocalScript', toggleBb)
+
+	local value = Instance.new("BoolValue")
+	value.Parent = script
+
+	script.Parent.MouseButton1Click:Connect(function()
+
+		if script.Parent.TextTransparency == 1 then
+
+			script.Parent.TextTransparency = 0
+
+		else
+
+			script.Parent.TextTransparency = 1
+
+		end
+
+		if value.Value == true then
+
+			value.Value = false
+
+		else 
+
+			value.Value = true
+
+		end
+
+
+		ESPscript.Boxes = value.Value
+
+
+	end)
+end
+coroutine.wrap(ESKUJ_fake_script)()
+local function DVOJB_fake_script() -- toggleTb.LocalScript 
+	local script = Instance.new('LocalScript', toggleTb)
+
+	local value = Instance.new("BoolValue")
+	value.Parent = script
+
+	script.Parent.MouseButton1Click:Connect(function()
+
+		if script.Parent.TextTransparency == 1 then
+
+			script.Parent.TextTransparency = 0
+
+		else
+
+			script.Parent.TextTransparency = 1
+
+		end
+
+		if value.Value == true then
+
+			value.Value = false
+
+		else 
+
+			value.Value = true
+
+		end
+
+		ESPscript.Tracers = value.Value
+
+	end)
+end
+coroutine.wrap(DVOJB_fake_script)()
+local function FZVRLL_fake_script() -- BankText.LocalScript 
 	local script = Instance.new('LocalScript', BankText)
 
 	local text = script.Parent
 	local button = script.Parent.Parent
-	
+
 	script.Parent.MouseEnter:Connect(function()
-	
+
 		text.TextTransparency = 0
-		
+
 	end)
-	
+
 	script.Parent.MouseLeave:Connect(function()
-		
+
 		text.TextTransparency = 1
-	
+
 	end)
-	
+
 	button.MouseButton1Click:Connect(function()
-		
+
 		local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
 		local location = CFrame.new(-429.896362, 22.9660358, -287.268311, -0.997827113, -5.837963e-08, 0.0658863559, -5.73565586e-08, 1, 1.74193655e-08, -0.0658863559, 1.36025013e-08, -0.997827113)
 		local humanoid = game.Players.LocalPlayer.Character.Humanoid
 		humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
 		wait(0.1)
 		pl.CFrame = location
-		
+
 	end)
 end
-coroutine.wrap(MGGIRLC_fake_script)()
-local function ELZPZCJ_fake_script() -- DBText.LocalScript 
+coroutine.wrap(FZVRLL_fake_script)()
+local function JOEE_fake_script() -- DBText.LocalScript 
 	local script = Instance.new('LocalScript', DBText)
 
 	local text = script.Parent
 	local button = script.Parent.Parent
-	
+
 	script.Parent.MouseEnter:Connect(function()
-	
+
 		text.TextTransparency = 0
-		
+
 	end)
-	
+
 	script.Parent.MouseLeave:Connect(function()
-		
+
 		text.TextTransparency = 1
-	
+
 	end)
-	
+
 	button.MouseButton1Click:Connect(function()
-		
+
 		local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
 		local location = CFrame.new(-1014.70685, 21.75, -278.840179, -0.235771969, 1.32394405e-07, 0.971808434, 5.21076586e-08, 1, -1.23593168e-07, -0.971808434, 2.14988578e-08, -0.235771969)
 		local humanoid = game.Players.LocalPlayer.Character.Humanoid
 		humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
 		wait(0.1)
 		pl.CFrame = location
-		
+
 	end)
 end
-coroutine.wrap(ELZPZCJ_fake_script)()
-local function ILDOX_fake_script() -- FoodText.LocalScript 
+coroutine.wrap(JOEE_fake_script)()
+local function FBJH_fake_script() -- FoodText.LocalScript 
 	local script = Instance.new('LocalScript', FoodText)
 
 	local text = script.Parent
 	local button = script.Parent.Parent
-	
+
 	script.Parent.MouseEnter:Connect(function()
-	
+
 		text.TextTransparency = 0
-		
+
 	end)
-	
+
 	script.Parent.MouseLeave:Connect(function()
-		
+
 		text.TextTransparency = 1
-	
+
 	end)
-	
+
 	button.MouseButton1Click:Connect(function()
-		
+
 		local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
 		local location = CFrame.new(-341.818817, 23.6848488, -298.309052, 0.272637665, 0.0211459044, -0.961884379, -0.00797657669, 0.999773741, 0.019717969, 0.962083697, 0.00229668408, 0.272744656)
 		local humanoid = game.Players.LocalPlayer.Character.Humanoid
 		humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
 		wait(0.1)
 		pl.CFrame = location
-		
+
 	end)
 end
-coroutine.wrap(ILDOX_fake_script)()
-local function GRTRB_fake_script() -- RevText.LocalScript 
+coroutine.wrap(FBJH_fake_script)()
+local function XQAGL_fake_script() -- RevText.LocalScript 
 	local script = Instance.new('LocalScript', RevText)
 
 	local text = script.Parent
 	local button = script.Parent.Parent
-	
+
 	script.Parent.MouseEnter:Connect(function()
-	
+
 		text.TextTransparency = 0
-		
+
 	end)
-	
+
 	script.Parent.MouseLeave:Connect(function()
-		
+
 		text.TextTransparency = 1
-	
+
 	end)
-	
+
 	button.MouseButton1Click:Connect(function()
-		
+
 		local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
 		local location = CFrame.new(-605.823364, 21.7575264, -138.823486, -0.467215419, 2.26486883e-08, 0.884143531, 7.92540291e-08, 1, 1.62643445e-08, -0.884143531, 7.76708902e-08, -0.467215419)
 		local humanoid = game.Players.LocalPlayer.Character.Humanoid
 		humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
 		wait(0.1)
 		pl.CFrame = location
-		
+
 	end)
 end
-coroutine.wrap(GRTRB_fake_script)()
-local function QYQXG_fake_script() -- UPText.LocalScript 
+coroutine.wrap(XQAGL_fake_script)()
+local function JFDR_fake_script() -- UPText.LocalScript 
 	local script = Instance.new('LocalScript', UPText)
 
 	local text = script.Parent
 	local button = script.Parent.Parent
-	
+
 	script.Parent.MouseEnter:Connect(function()
-	
+
 		text.TextTransparency = 0
-		
+
 	end)
-	
+
 	script.Parent.MouseLeave:Connect(function()
-		
+
 		text.TextTransparency = 1
-	
+
 	end)
-	
+
 	button.MouseButton1Click:Connect(function()
-		
+
 		local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
 		local location = CFrame.new(454.426605, 47.7550011, -571.7005, -0.277744412, -7.67701295e-07, -0.960655034, -2.41403342e-07, 1, -7.29349097e-07, 0.960655034, 2.93326892e-08, -0.277744412)
 		local humanoid = game.Players.LocalPlayer.Character.Humanoid
 		humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
 		wait(0.1)
 		pl.CFrame = location
-		
+
 	end)
 end
-coroutine.wrap(QYQXG_fake_script)()
-local function KNGGJG_fake_script() -- AdText.LocalScript 
+coroutine.wrap(JFDR_fake_script)()
+local function CMMNUB_fake_script() -- AdText.LocalScript 
 	local script = Instance.new('LocalScript', AdText)
 
 	local text = script.Parent
 	local button = script.Parent.Parent
-	
+
 	script.Parent.MouseEnter:Connect(function()
-	
+
 		text.TextTransparency = 0
-		
+
 	end)
-	
+
 	script.Parent.MouseLeave:Connect(function()
-		
+
 		text.TextTransparency = 1
-	
+
 	end)
-	
+
 	button.MouseButton1Click:Connect(function()
-		
+
 		local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
 		local location = CFrame.new(-871.035034, -32.6416817, -653.49707, -0.999930024, 1.01258832e-08, -0.0118284598, 1.00539195e-08, 1, 6.14346529e-09, 0.0118284598, 6.02411321e-09, -0.999930024)
 		local humanoid = game.Players.LocalPlayer.Character.Humanoid
 		humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
 		wait(0.1)
 		pl.CFrame = location
-		
+
 	end)
 end
-coroutine.wrap(KNGGJG_fake_script)()
-local function LKZFFHV_fake_script() -- ArmorDtext.LocalScript 
+coroutine.wrap(CMMNUB_fake_script)()
+local function LZRXOIR_fake_script() -- ArmorDtext.LocalScript 
 	local script = Instance.new('LocalScript', ArmorDtext)
 
 	local text = script.Parent
 	local button = script.Parent.Parent
-	
+
 	script.Parent.MouseEnter:Connect(function()
-	
+
 		text.TextTransparency = 0
-		
+
 	end)
-	
+
 	script.Parent.MouseLeave:Connect(function()
-		
+
 		text.TextTransparency = 1
-	
+
 	end)
-	
+
 	button.MouseButton1Click:Connect(function()
-		
+
 		local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
 		local location = CFrame.new(-577.019714, 10.6067495, -792.766602, 0.037051864, -1.45036223e-08, 0.999313354, -2.06220552e-08, 1, 1.52781983e-08, -0.999313354, -2.11739817e-08, 0.037051864)
 		local humanoid = game.Players.LocalPlayer.Character.Humanoid
 		humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
 		wait(0.1)
 		pl.CFrame = location
-		
+
 	end)
 end
-coroutine.wrap(LKZFFHV_fake_script)()
-local function REEFCCF_fake_script() -- ArmorUtext.LocalScript 
+coroutine.wrap(LZRXOIR_fake_script)()
+local function AUYUMK_fake_script() -- ArmorUtext.LocalScript 
 	local script = Instance.new('LocalScript', ArmorUtext)
 
 	local text = script.Parent
 	local button = script.Parent.Parent
-	
+
 	script.Parent.MouseEnter:Connect(function()
-	
+
 		text.TextTransparency = 0
-		
+
 	end)
-	
+
 	script.Parent.MouseLeave:Connect(function()
-		
+
 		text.TextTransparency = 1
-	
+
 	end)
-	
+
 	button.MouseButton1Click:Connect(function()
-		
+
 		local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
 		local location = CFrame.new(558.437683, 50.5644913, -625.397217, 0.0162371919, -8.74482975e-09, 0.999868155, -3.92617814e-08, 1, 9.3835677e-09, -0.999868155, -3.94089703e-08, 0.0162371919)
 		local humanoid = game.Players.LocalPlayer.Character.Humanoid
 		humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
 		wait(0.1)
 		pl.CFrame = location
-		
+
 	end)
 end
-coroutine.wrap(REEFCCF_fake_script)()
-local function TSAE_fake_script() -- DHText.LocalScript 
+coroutine.wrap(AUYUMK_fake_script)()
+local function IPCPTZT_fake_script() -- DHText.LocalScript 
 	local script = Instance.new('LocalScript', DHText)
 
 	local text = script.Parent
 	local button = script.Parent.Parent
-	
+
 	script.Parent.MouseEnter:Connect(function()
-	
+
 		text.TextTransparency = 0
-		
+
 	end)
-	
+
 	script.Parent.MouseLeave:Connect(function()
-		
+
 		text.TextTransparency = 1
-	
+
 	end)
-	
+
 	button.MouseButton1Click:Connect(function()
-		
+
 		local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
 		local location = CFrame.new(-550.925537, 8.00737953, -743.751038, -0.0410554484, -1.16903931e-09, -0.999156892, 9.51145829e-09, 1, -1.56085256e-09, 0.999156892, -9.56752011e-09, -0.0410554484)
 		local humanoid = game.Players.LocalPlayer.Character.Humanoid
 		humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
 		wait(0.1)
 		pl.CFrame = location
-		
+
 	end)
 end
-coroutine.wrap(TSAE_fake_script)()
-local function KTONJKG_fake_script() -- HATExt.LocalScript 
+coroutine.wrap(IPCPTZT_fake_script)()
+local function VUZRB_fake_script() -- HATExt.LocalScript 
 	local script = Instance.new('LocalScript', HATExt)
 
 	local text = script.Parent
 	local button = script.Parent.Parent
-	
+
 	script.Parent.MouseEnter:Connect(function()
-	
+
 		text.TextTransparency = 0
-		
+
 	end)
-	
+
 	script.Parent.MouseLeave:Connect(function()
-		
+
 		text.TextTransparency = 1
-	
+
 	end)
-	
+
 	button.MouseButton1Click:Connect(function()
-		
+
 		local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
 		local location = CFrame.new(-934.667786, -28.642477, 550.304626, -0.998897433, 1.77966051e-08, 0.046946004, 2.30510615e-08, 1, 1.11384168e-07, -0.046946004, 1.12343514e-07, -0.998897433)
 		local humanoid = game.Players.LocalPlayer.Character.Humanoid
 		humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
 		wait(0.1)
 		pl.CFrame = location
-		
+
 	end)
 end
-coroutine.wrap(KTONJKG_fake_script)()
-local function SLAXKNE_fake_script() -- AdPText.LocalScript 
+coroutine.wrap(VUZRB_fake_script)()
+local function GPPLPT_fake_script() -- AdPText.LocalScript 
 	local script = Instance.new('LocalScript', AdPText)
 
 	local text = script.Parent
 	local button = script.Parent.Parent
-	
+
 	script.Parent.MouseEnter:Connect(function()
-	
+
 		text.TextTransparency = 0
-		
+
 	end)
-	
+
 	script.Parent.MouseLeave:Connect(function()
-		
+
 		text.TextTransparency = 1
-	
+
 	end)
-	
+
 	button.MouseButton1Click:Connect(function()
-		
+
 		local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
 		local location = CFrame.new(-798.395996, -39.6416817, -857.692688, -0.999758482, 1.88793052e-08, 0.0219778698, 2.05554329e-08, 1, 7.60384467e-08, -0.0219778698, 7.64718493e-08, -0.999758482)
 		local humanoid = game.Players.LocalPlayer.Character.Humanoid
 		humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
 		wait(0.1)
 		pl.CFrame = location
-		
+
 	end)
 end
-coroutine.wrap(SLAXKNE_fake_script)()
-local function USQTZ_fake_script() -- BankRText.LocalScript 
+coroutine.wrap(GPPLPT_fake_script)()
+local function XLNNM_fake_script() -- BankRText.LocalScript 
 	local script = Instance.new('LocalScript', BankRText)
 
 	local text = script.Parent
 	local button = script.Parent.Parent
-	
+
 	script.Parent.MouseEnter:Connect(function()
-	
+
 		text.TextTransparency = 0
-		
+
 	end)
-	
+
 	script.Parent.MouseLeave:Connect(function()
-		
+
 		text.TextTransparency = 1
-	
+
 	end)
-	
+
 	button.MouseButton1Click:Connect(function()
-		
+
 		local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
 		local location = CFrame.new(-372.505035, 21.2575226, -340.594604, 0.999405861, -2.67699534e-08, -0.0344657786, 2.98557339e-08, 1, 8.90170213e-08, 0.0344657786, -8.99931365e-08, 0.999405861)
 		local humanoid = game.Players.LocalPlayer.Character.Humanoid
 		humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
 		wait(0.1)
 		pl.CFrame = location
-		
+
 	end)
 end
-coroutine.wrap(USQTZ_fake_script)()
-local function ZIWHF_fake_script() -- SPText.LocalScript 
+coroutine.wrap(XLNNM_fake_script)()
+local function NUSOKIG_fake_script() -- SPText.LocalScript 
 	local script = Instance.new('LocalScript', SPText)
 
 	local text = script.Parent
 	local button = script.Parent.Parent
-	
+
 	script.Parent.MouseEnter:Connect(function()
-	
+
 		text.TextTransparency = 0
-		
+
 	end)
-	
+
 	script.Parent.MouseLeave:Connect(function()
-		
+
 		text.TextTransparency = 1
-	
+
 	end)
-	
+
 	button.MouseButton1Click:Connect(function()
-		
+
 		local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
 		local location = CFrame.new(123.415276, 38.2575188, 200027.297, 0.0107507845, 6.35756123e-08, -0.999942183, 3.47019236e-09, 1, 6.36165964e-08, 0.999942183, -4.15392032e-09, 0.0107507845)
 		local humanoid = game.Players.LocalPlayer.Character.Humanoid
 		humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
 		wait(0.1)
 		pl.CFrame = location
-		
+
 	end)
 end
-coroutine.wrap(ZIWHF_fake_script)()
-local function HVROGLA_fake_script() -- DBGText.LocalScript 
+coroutine.wrap(NUSOKIG_fake_script)()
+local function KJILQE_fake_script() -- DBGText.LocalScript 
 	local script = Instance.new('LocalScript', DBGText)
 
 	local button = script.Parent.Parent
 	local text = script.Parent
-	
+
 	script.Parent.MouseEnter:Connect(function()
-	
+
 		text.TextTransparency = 0
-		
+
 	end)
-	
+
 	script.Parent.MouseLeave:Connect(function()
-		
+
 		text.TextTransparency = 1
-	
+
 	end)
 end
-coroutine.wrap(HVROGLA_fake_script)()
-local function FDDV_fake_script() -- RevGText.LocalScript 
+coroutine.wrap(KJILQE_fake_script)()
+local function ISBVTIK_fake_script() -- RevGText.LocalScript 
 	local script = Instance.new('LocalScript', RevGText)
 
 	local text = script.Parent
 	local button = script.Parent.Parent
-	
+
 	script.Parent.MouseEnter:Connect(function()
-	
+
 		text.TextTransparency = 0
-		
+
 	end)
-	
+
 	script.Parent.MouseLeave:Connect(function()
-		
+
 		text.TextTransparency = 1
-	
+
 	end)
 end
-coroutine.wrap(FDDV_fake_script)()
-local function ZUUD_fake_script() -- SGTExt.LocalScript 
+coroutine.wrap(ISBVTIK_fake_script)()
+local function XFTKT_fake_script() -- SGTExt.LocalScript 
 	local script = Instance.new('LocalScript', SGTExt)
 
 	local text = script.Parent
 	local button = script.Parent.Parent
-	
+
 	script.Parent.MouseEnter:Connect(function()
-	
+
 		text.TextTransparency = 0
-		
+
 	end)
-	
+
 	script.Parent.MouseLeave:Connect(function()
-		
+
 		text.TextTransparency = 1
-	
+
 	end)
 end
-coroutine.wrap(ZUUD_fake_script)()
-local function LPBABKU_fake_script() -- SMGText.LocalScript 
+coroutine.wrap(XFTKT_fake_script)()
+local function LPRVQP_fake_script() -- SMGText.LocalScript 
 	local script = Instance.new('LocalScript', SMGText)
 
 	local text = script.Parent
 	local button = script.Parent.Parent
-	
+
 	script.Parent.MouseEnter:Connect(function()
-	
+
 		text.TextTransparency = 0
-		
+
 	end)
-	
+
 	script.Parent.MouseLeave:Connect(function()
-		
+
 		text.TextTransparency = 1
-	
+
 	end)
 end
-coroutine.wrap(LPBABKU_fake_script)()
-local function KAZI_fake_script() -- TSGText.LocalScript 
+coroutine.wrap(LPRVQP_fake_script)()
+local function EEYQKU_fake_script() -- TSGText.LocalScript 
 	local script = Instance.new('LocalScript', TSGText)
 
 	local text = script.Parent
 	local button = script.Parent.Parent
-	
+
 	script.Parent.MouseEnter:Connect(function()
-	
+
 		text.TextTransparency = 0
-		
+
 	end)
-	
+
 	script.Parent.MouseLeave:Connect(function()
-		
+
 		text.TextTransparency = 1
-	
+
 	end)
 end
-coroutine.wrap(KAZI_fake_script)()
-local function RPIRGND_fake_script() -- GlTExt.LocalScript 
+coroutine.wrap(EEYQKU_fake_script)()
+local function PGLE_fake_script() -- GlTExt.LocalScript 
 	local script = Instance.new('LocalScript', GlTExt)
 
 	local text = script.Parent
 	local button = script.Parent.Parent
-	
+
 	script.Parent.MouseEnter:Connect(function()
-	
+
 		text.TextTransparency = 0
-		
+
 	end)
-	
+
 	script.Parent.MouseLeave:Connect(function()
-		
+
 		text.TextTransparency = 1
-	
+
 	end)
 end
-coroutine.wrap(RPIRGND_fake_script)()
-local function KHPBH_fake_script() -- LMGTExt.LocalScript 
+coroutine.wrap(PGLE_fake_script)()
+local function UEGZBR_fake_script() -- LMGTExt.LocalScript 
 	local script = Instance.new('LocalScript', LMGTExt)
 
 	local text = script.Parent
 	local button = script.Parent.Parent
-	
+
 	script.Parent.MouseEnter:Connect(function()
-	
+
 		text.TextTransparency = 0
-		
+
 	end)
-	
+
 	script.Parent.MouseLeave:Connect(function()
-		
+
 		text.TextTransparency = 1
-	
+
 	end)
 end
-coroutine.wrap(KHPBH_fake_script)()
-local function EERFIYE_fake_script() -- P90Text.LocalScript 
+coroutine.wrap(UEGZBR_fake_script)()
+local function YFWV_fake_script() -- P90Text.LocalScript 
 	local script = Instance.new('LocalScript', P90Text)
 
 	local text = script.Parent
 	local button = script.Parent.Parent
-	
+
 	script.Parent.MouseEnter:Connect(function()
-	
+
 		text.TextTransparency = 0
-		
+
 	end)
-	
+
 	script.Parent.MouseLeave:Connect(function()
-		
+
 		text.TextTransparency = 1
-	
+
 	end)
 end
-coroutine.wrap(EERFIYE_fake_script)()
-local function GUYZ_fake_script() -- RPGText.LocalScript 
+coroutine.wrap(YFWV_fake_script)()
+local function REWR_fake_script() -- RPGText.LocalScript 
 	local script = Instance.new('LocalScript', RPGText)
 
 	local text = script.Parent
 	local button = script.Parent.Parent
-	
+
 	script.Parent.MouseEnter:Connect(function()
-	
+
 		text.TextTransparency = 0
-		
+
 	end)
-	
+
 	script.Parent.MouseLeave:Connect(function()
-		
+
 		text.TextTransparency = 1
-	
+
 	end)
 end
-coroutine.wrap(GUYZ_fake_script)()
-local function DTYMFM_fake_script() -- SilText.LocalScript 
+coroutine.wrap(REWR_fake_script)()
+local function GROYHRZ_fake_script() -- SilText.LocalScript 
 	local script = Instance.new('LocalScript', SilText)
 
 	local text = script.Parent
 	local button = script.Parent.Parent
-	
+
 	script.Parent.MouseEnter:Connect(function()
-	
+
 		text.TextTransparency = 0
-		
+
 	end)
-	
+
 	script.Parent.MouseLeave:Connect(function()
-		
+
 		text.TextTransparency = 1
-	
+
 	end)
 end
-coroutine.wrap(DTYMFM_fake_script)()
-local function VLIRA_fake_script() -- userimg.LocalScript 
+coroutine.wrap(GROYHRZ_fake_script)()
+local function PSDOP_fake_script() -- toggleAb.LocalScript 
+	local script = Instance.new('LocalScript', toggleAb)
+
+	script.Parent.MouseButton1Click:Connect(function()
+
+		if script.Parent.TextTransparency == 1 then
+
+			script.Parent.TextTransparency = 0
+
+		else
+
+			script.Parent.TextTransparency = 1
+
+		end
+
+	end)
+end
+coroutine.wrap(PSDOP_fake_script)()
+local function ULQBV_fake_script() -- userimg.LocalScript 
 	local script = Instance.new('LocalScript', userimg)
 
 	local frame = script.Parent.Parent
-	
+
 	local image = script.Parent
-	
+
 	local player = game.Players.LocalPlayer
-	
-	
-	
+
+
+
 	local userId = player.UserId
-	
+
 	local thumbType = Enum.ThumbnailType.AvatarBust
-	
+
 	local thumbSize = Enum.ThumbnailSize.Size420x420
-	
+
 	local content, isReady = game.Players:GetUserThumbnailAsync(userId, thumbType, thumbSize)
-	
-	
-	
-	
-	
+
+
+
+
+
 	image.Image = content
 end
-coroutine.wrap(VLIRA_fake_script)()
-local function SOBL_fake_script() -- w_text.LocalScript 
-	local script = Instance.new('LocalScript', w_text)
+coroutine.wrap(ULQBV_fake_script)()
+local function IECNX_fake_script() -- infotname.LocalScript 
+	local script = Instance.new('LocalScript', infotname)
 
-	local user = game.Players.LocalPlayer
-	local text = script.Parent
-	var = math.random(1,2)
-	
-	if var == 1 then
-		
-		text.Text = "sup, "..user.Name
-		
-		
-	else	
-		
-		text.Text = "welcome, "..user.Name
-		
+	local localplr = game.Players.LocalPlayer
+
+	script.Parent.Text = "username : "..localplr.Name
+end
+coroutine.wrap(IECNX_fake_script)()
+local function XFQVWW_fake_script() -- infoUID.LocalScript 
+	local script = Instance.new('LocalScript', infoUID)
+
+	local localplr = game.Players.LocalPlayer
+
+	script.Parent.Text = "userid : "..localplr.UserId
+end
+coroutine.wrap(XFQVWW_fake_script)()
+local function JUTRD_fake_script() -- infoGame.LocalScript 
+	local script = Instance.new('LocalScript', infoGame)
+
+	script.Parent.Text = "game : "..game.PlaceId
+
+	if game.PlaceId == 2788229376 then
+
+		script.Parent.Text = "game : Da Hood"
+
 	end
 end
-coroutine.wrap(SOBL_fake_script)()
-local function UCZQ_fake_script() -- toptext.LocalScript 
+coroutine.wrap(JUTRD_fake_script)()
+local function ZKUFGA_fake_script() -- infoDHC.LocalScript 
+	local script = Instance.new('LocalScript', infoDHC)
+
+	if game.PlaceId == 2788229376 then
+
+		script.Parent.Text = "game : Da Hood"
+
+	end
+end
+coroutine.wrap(ZKUFGA_fake_script)()
+local function UHNBX_fake_script() -- infoBounty.LocalScript 
+	local script = Instance.new('LocalScript', infoBounty)
+
+	if game.PlaceId == 2788229376 then
+
+		script.Parent.Text = "game : Da Hood"
+
+	end
+end
+coroutine.wrap(UHNBX_fake_script)()
+local function WPNOW_fake_script() -- toptext.LocalScript 
 	local script = Instance.new('LocalScript', toptext)
 
 	local value = Instance.new("StringValue")
 	value.Parent = script
 	value.Value = "1.0"
 
-	
 	script.Parent.Text = "pedrox.ggs - "..value.Value
 end
-coroutine.wrap(UCZQ_fake_script)()
-local function EGESE_fake_script() -- mB.LocalScript 
+coroutine.wrap(WPNOW_fake_script)()
+local function IBAWP_fake_script() -- mB.LocalScript 
 	local script = Instance.new('LocalScript', mB)
 
 	local frames = script.Parent.Parent.Parent.Parent.tabs
@@ -2138,18 +2548,18 @@ local function EGESE_fake_script() -- mB.LocalScript
 	local m = frames.main
 	local e = frames.esp
 	local t = frames.teleports
-	
+
 	script.Parent.MouseButton1Click:Connect(function()
-		
+
 		w.Visible = false
 		m.Visible = true
 		e.Visible = false
 		t.Visible = false
-		
+
 	end)
 end
-coroutine.wrap(EGESE_fake_script)()
-local function AWXRZ_fake_script() -- eB.LocalScript 
+coroutine.wrap(IBAWP_fake_script)()
+local function HDIX_fake_script() -- eB.LocalScript 
 	local script = Instance.new('LocalScript', eB)
 
 	local frames = script.Parent.Parent.Parent.Parent.tabs
@@ -2157,18 +2567,18 @@ local function AWXRZ_fake_script() -- eB.LocalScript
 	local m = frames.main
 	local e = frames.esp
 	local t = frames.teleports
-	
+
 	script.Parent.MouseButton1Click:Connect(function()
-		
+
 		w.Visible = false
 		m.Visible = false
 		e.Visible = true
 		t.Visible = false
-		
+
 	end)
 end
-coroutine.wrap(AWXRZ_fake_script)()
-local function XTCKZPC_fake_script() -- tpB.LocalScript 
+coroutine.wrap(HDIX_fake_script)()
+local function BIJRHJ_fake_script() -- tpB.LocalScript 
 	local script = Instance.new('LocalScript', tpB)
 
 	local frames = script.Parent.Parent.Parent.Parent.tabs
@@ -2176,34 +2586,34 @@ local function XTCKZPC_fake_script() -- tpB.LocalScript
 	local m = frames.main
 	local e = frames.esp
 	local t = frames.teleports
-	
+
 	script.Parent.MouseButton1Click:Connect(function()
-		
+
 		w.Visible = false
 		m.Visible = false
 		e.Visible = false
 		t.Visible = true
-		
+
 	end)
 end
-coroutine.wrap(XTCKZPC_fake_script)()
-local function GPTUZOF_fake_script() -- ui.drag n shit 
+coroutine.wrap(BIJRHJ_fake_script)()
+local function EFTGW_fake_script() -- ui.drag n shit 
 	local script = Instance.new('LocalScript', ui)
 
 	local UserInputService = game:GetService("UserInputService")
 	local runService = (game:GetService("RunService"));
-	
+
 	local gui = script.Parent
-	
+
 	local dragging
 	local dragInput
 	local dragStart
 	local startPos
-	
+
 	function Lerp(a, b, m)
 		return a + (b - a) * m
 	end;
-	
+
 	local lastMousePos
 	local lastGoalPos
 	local DRAG_SPEED = (8); -- // The speed of the UI darg.
@@ -2213,21 +2623,21 @@ local function GPTUZOF_fake_script() -- ui.drag n shit
 			gui.Position = UDim2.new(startPos.X.Scale, Lerp(gui.Position.X.Offset, lastGoalPos.X.Offset, dt * DRAG_SPEED), startPos.Y.Scale, Lerp(gui.Position.Y.Offset, lastGoalPos.Y.Offset, dt * DRAG_SPEED))
 			return 
 		end;
-	
+
 		local delta = (lastMousePos - UserInputService:GetMouseLocation())
 		local xGoal = (startPos.X.Offset - delta.X);
 		local yGoal = (startPos.Y.Offset - delta.Y);
 		lastGoalPos = UDim2.new(startPos.X.Scale, xGoal, startPos.Y.Scale, yGoal)
 		gui.Position = UDim2.new(startPos.X.Scale, Lerp(gui.Position.X.Offset, xGoal, dt * DRAG_SPEED), startPos.Y.Scale, Lerp(gui.Position.Y.Offset, yGoal, dt * DRAG_SPEED))
 	end;
-	
+
 	gui.InputBegan:Connect(function(input)
 		if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
 			dragging = true
 			dragStart = input.Position
 			startPos = gui.Position
 			lastMousePos = UserInputService:GetMouseLocation()
-	
+
 			input.Changed:Connect(function()
 				if input.UserInputState == Enum.UserInputState.End then
 					dragging = false
@@ -2235,34 +2645,34 @@ local function GPTUZOF_fake_script() -- ui.drag n shit
 			end)
 		end
 	end)
-	
+
 	gui.InputChanged:Connect(function(input)
 		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
 			dragInput = input
 		end
 	end)
-	
+
 	runService.Heartbeat:Connect(Update)
-	
+
 	local uis = game:GetService("UserInputService")
 	local gui = script.Parent.Parent
-	
+
 	uis.InputBegan:Connect(function(input)
-		
+
 		if input.KeyCode == Enum.KeyCode.RightControl then
-			
+
 			if gui.Enabled == true then
-				
+
 				gui.Enabled = false
-				
+
 			else
-				
+
 				gui.Enabled = true
-				
+
 			end
-			
+
 		end
-		
+
 	end)
 end
-coroutine.wrap(GPTUZOF_fake_script)()
+coroutine.wrap(EFTGW_fake_script)()
