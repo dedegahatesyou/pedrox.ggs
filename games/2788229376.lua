@@ -3,7 +3,7 @@
 
 -- remove clones
 for _, v in next, game:GetService("CoreGui"):GetChildren() do
-	if (v.Name:match("FreeAnimationPack")) then
+	if (v.Name:match("pedrox.ggs")) then
 		v:Destroy()
 	end
 end
