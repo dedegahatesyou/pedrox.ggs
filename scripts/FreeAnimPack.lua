@@ -1,6 +1,3 @@
--- Gui to Lua
--- Version: 3.2
-
 -- // clone
 for _, v in next, game:GetService("CoreGui"):GetChildren() do
 	if (v.Name:match("FreeAnimationPack")) then
