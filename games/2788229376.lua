@@ -1537,7 +1537,7 @@ end
 coroutine.wrap(AOYQNPR_fake_script)()
 local function DINIZ_fake_script() -- flybutton.LocalScript 
 	
-	local script = Instance.new('LocalScritp', flybutton)
+	local script = Instance.new('LocalScript', flybutton)
 	
 	script.Parent.MouseButton1Click:Connect(function()
 
