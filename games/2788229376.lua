@@ -242,7 +242,7 @@ local pedroxggs = {
 
 local Settings = {
 	CFSpeed = {
-		Speed = 2,
+		Speed = 1,
 
 		Enabled = false,
 		Toggled = false,
