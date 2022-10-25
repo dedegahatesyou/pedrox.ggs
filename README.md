@@ -10,7 +10,7 @@ PedroX on top! 😝
 --[[
 
  PEDROX GUI
- VERSION: V1.0
+ VERSION: V1.1
  SUPPORTED GAMES: Da Hood
 
 ]]--
