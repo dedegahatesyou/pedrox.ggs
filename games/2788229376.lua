@@ -1,5 +1,3 @@
---// stop skidding nigger make your own shit
-
 repeat 
 	wait() 
 until game:IsLoaded()
