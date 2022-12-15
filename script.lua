@@ -1,10 +1,10 @@
 --[[
 
-PEDROX GUI
+pedrox.ggs
 
-VERSION: V1.1
+version: V1.1
 
-SUPPORTED GAMES: Da Hood, Breaking Point
+supported games: Da Hood, Breaking Point
 
 ]]--
 
