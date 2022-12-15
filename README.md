@@ -9,11 +9,11 @@ PedroX on top! 😝
 
 --[[
 
- PEDROX GUI
- 
- VERSION: V1.1
- 
- SUPPORTED GAMES: Da Hood
+pedrox.ggs
+
+version: V1.1
+
+supported games: Da Hood, Breaking Point
 
 ]]--
 
