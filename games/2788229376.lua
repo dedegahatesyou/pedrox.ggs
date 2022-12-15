@@ -4177,16 +4177,16 @@ local function ZRJX_fake_script() -- pedroxggs.ZombieOldschoolButton.LocalScript
 	end)
 end
 coroutine.wrap(ZRJX_fake_script)()
-local function VGYUBGN_fake_script() -- pedroxggs.toptext.LocalScript 
-	local script = Instance.new('LocalScript', pedroxggs.toptext)
+local function DLSHUY_fake_script() -- toptext.LocalScript 
+	local script = Instance.new('LocalScript', toptext)
 
 	local value = Instance.new("StringValue")
 	value.Value = "1.1"
 	value.Parent = script
-
+	
 	script.Parent.Text = "pedrox.ggs - "..value.Value
 end
-coroutine.wrap(VGYUBGN_fake_script)()
+coroutine.wrap(DLSHUY_fake_script)()
 local function OWEK_fake_script() -- pedroxggs.mB.LocalScript 
 	local script = Instance.new('LocalScript', pedroxggs.mB)
 
