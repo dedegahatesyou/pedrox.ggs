@@ -1596,7 +1596,7 @@ local function DLSHUY_fake_script() -- toptext.LocalScript
 	local script = Instance.new('LocalScript', toptext)
 
 	local value = Instance.new("StringValue")
-	value.Value = "1.0"
+	value.Value = "1.1"
 	value.Parent = script
 	
 	script.Parent.Text = "pedrox.ggs - "..value.Value
