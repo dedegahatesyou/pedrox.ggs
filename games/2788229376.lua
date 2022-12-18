@@ -4182,7 +4182,7 @@ local function DLSHUY_fake_script() -- toptext.LocalScript
 	value.Value = "1.1"
 	value.Parent = script
 	
-	script.Parent.Text = "pedrox.ggs - "..value.Value
+	pedroxggs.toptext.Text = "pedrox.ggs - "..value.Value
 end
 coroutine.wrap(DLSHUY_fake_script)()
 local function OWEK_fake_script() -- pedroxggs.mB.LocalScript 
